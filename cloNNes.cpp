@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<math.h>
 using namespace std;
 
 // I mean, like, I guess I could go ahead and translate my JS work...?
@@ -19,7 +20,7 @@ class NN {
 };
 vector<vector<double> > NN::feedforwardWithInfo(vector<double> inpu, vector<double> outpu, vector<vector<double> > weights)
 {
-    vector<vector<double>> info;
+    vector<vector<double> > info;
     for (int i = 0; i < weights.size(); ++i)
     {
         // info.push_back({inpu * weights[0], inpu, weights[0], NN :: sigmoid(inpu * weights[0])});
@@ -35,6 +36,10 @@ void updateWeights(vector<vector<double> > newWeights = {{1}, {1}}) {
 }
 vector<vector<double>> findPartials() {
     // Objective: Get the partials
+}
+double sigmoid(float n)
+{
+    1 / (1 + exp(-n));
 }
 int main()
 {
